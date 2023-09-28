@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query</title>
+    <style>
+        .container{
+            display: flex;
+        }
+        .box{
+            border: 1px solid black;
+            border-radius: 10px;
+        }
+        .box1{
+            background-color:lightcoral;
+        }
+        .box2{
+            background-color: aqua;
+        }
+        .box3{
+            background-color: darkgoldenrod;
+        }
+        .box4{
+            background-color: darkgreen;
+        }
+        .box5{
+           background-color: aquamarine;
+        }
+        @media screen and (max-width: 425px){
+            .box2, .box3, .box4, .box5{
+                display: none;
+            }
+            .box1{
+                margin: 0px auto;
+                text-align: center;
+                text-align: center;
+                text-align: center;
+            }
+        }
+        @media screen and (min-width: 425px) and (max-width: 768px){
+            .box1, .box3, .box4, .box5{
+                display: none;
+            }
+            .box2{
+                margin: 0px auto;
+                height: 300px;
+                width: 500px;
+                text-align: center;
+                text-align: center;
+            }
+        }
+        @media screen and (min-width: 768px) and (max-width: 1024px){
+            .box1, .box2, .box4, .box5{
+                display: none;
+            }
+            .box3{
+                margin: 0px auto;
+                height: 400px;
+                width: 600px;
+                text-align: center;
+                text-align: center;
+            }
+        }
+        @media screen and (min-width: 1024px) and (max-width: 1400px){
+            .box1, .box2, .box3, .box5{
+                display: none;
+            }
+            .box4{
+                margin: 0px auto;
+                height: 500px;
+                width: 800px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box box1"><h1>This is a media Query Demo Page</h1><h2>Screen Size 425px</h2></div>
+        <div class="box box2"><h1>This is a media Query Demo Page</h1><h2>Screen Size 768px</h2></div>
+        <div class="box box3"><h1>This is a media Query Demo Page</h1><h2>Screen Size 1024px</h2></div>
+        <div class="box box4"><h1>This is a media Query Demo Page</h1><h2>Screen Size 1440px</h2></div>
+        <div class="box box5"><h1>This is a media Query Demo Page</h1></div>
+    </div>
+</body>
+</html>
